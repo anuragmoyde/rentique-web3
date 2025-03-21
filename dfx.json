@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "rentique_backend": {
+      "main": "src/rentique_backend/main.mo",
+      "type": "motoko"
+    },
+    "rentique_frontend": {
+      "dependencies": [
+        "rentique_backend"
+      ],
+      "source": [
+        "src/rentique_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "rentique_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

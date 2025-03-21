@@ -1,8 +1,93 @@
-# `rentique`
+# Rentique: Tech-Enabled Fashion Rental Marketplace
 
-Welcome to your new `rentique` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+## Overview
+Rentique is a seamless, tech-enabled rental marketplace designed to revolutionize the fashion industry in India. With 7,800 kilotonnes of textile waste generated annually, driven by frequent single-use clothing purchases for weddings, parties, and formal events, Rentique provides an eco-conscious alternative. By connecting consumers with boutique stores and independent fashion vendors, Rentique offers a convenient way to rent premium apparel while allowing businesses to monetize idle inventory.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+## Features
+- **Seamless Renting Experience**: Browse, book, and rent high-end fashion with ease.
+- **Vendor Monetization**: Boutique stores and designers can list their inventory for additional revenue.
+- **Standardized Quality & Fit**: Ensures verified quality control and accurate sizing.
+- **Eco-Conscious Choice**: Reduces fashion waste and promotes sustainable consumption.
+- **Tech-Enabled Platform**: Intuitive user interface powered by scalable backend services.
+
+## Tech Stack
+### Frontend:
+- **Framework**: JavaScript, React.js
+- **Build Tools**: Webpack, npm
+- **Hosting**: Internet Computer (ICP) Canister
+
+### Backend:
+- **Language**: Motoko
+- **Framework**: Internet Computer (ICP) Canisters
+- **Storage**: Decentralized asset storage for inventory and images
+
+## Project Structure
+```
+rentique-icp/
+├── src/
+│   ├── rentique-icp-frontend/  # Frontend React App
+│   │   ├── src/
+│   │   ├── public/
+│   │   ├── package.json
+│   │   ├── dist/  # Compiled frontend assets
+│   ├── rentique-icp-backend/   # Backend logic in Motoko
+│   │   ├── main.mo
+│   ├── declarations/  # Generated type declarations for API interactions
+├── dfx.json  # Configuration for Internet Computer Canisters
+├── .dfx/  # Local environment directory
+├── README.md  # Project documentation
+```
+
+## Installation & Setup
+### Prerequisites
+- Install [DFINITY SDK](https://internetcomputer.org/docs/current/developer-docs/setup/local-setup)
+- Install Node.js and npm
+
+### Steps to Run Locally
+```sh
+# Clone the repository
+git clone https://github.com/yourusername/rentique.git
+cd rentique-icp
+
+# Install frontend dependencies
+cd src/rentique-icp-frontend
+npm install
+npm run build
+cd ../../
+
+# Start the local replica
+dfx start --background
+
+# Deploy backend and frontend canisters
+dfx canister create --all
+dfx build
+dfx deploy
+```
+
+## Deployment
+For deployment on the Internet Computer, ensure you have an ICP wallet set up. Run:
+```sh
+dfx deploy --network ic
+```
+
+## Usage
+Once deployed, access the frontend via:
+```
+[http://bd3sg-teaaa-aaaaa-qaaba-cai.localhost:4943/](https://fyye2-laaaa-aaaah-qqacq-cai.icp0.io/
+)
+```
+And the backend API via:
+```
+ https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=f7zco-gyaaa-aaaah-qqaca-cai
+```
+
+## Contributing
+We welcome contributions! Feel free to open issues and submit pull requests.
+
+## License
+MIT License
+
+
 
 To learn more before you start working with `rentique`, see the following documentation available online:
 
